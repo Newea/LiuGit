@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>函数</title>
+</head>
+
+<body>
+    <script>
+        // 1.函数封装,求1~100的累加和
+        // function abb() {
+        //     var sum = 0
+        //     for (var i = 1; i <= 100; i++) {
+        //         sum += i
+        //     }
+        //     console.log(sum)
+        // }
+        // abb()
+        // console.log('--------------------------------------------------------------')
+
+        // // 2.函数封装求任意和
+        // function abb(num1, num2) {
+        //     var num = 0
+        //     for (var i = num1; i <= num2; i++) {
+        //         num += i
+        //     }
+        //     console.log(num)
+        // }
+        // abb(1, 100)
+        // console.log('--------------------------------------------------------------')
+
+        //  3.函数封装,求数组中最大值
+        // function getArrMax(arr) {
+        //     var max = arr[0]
+        //     for (var i = 1; i <= arr.length; i++) {
+        //         if (arr[i] > max) {
+        //             max = arr[i]
+        //         }
+        //     }
+        //     return max
+        // }
+        // var bb = getArrMax([[6, 5, 8, 11, 5]])
+        // console.log(bb)
+        // console.log('--------------------------------------------------------------')
+
+        // 4.运用函数封装进行reverse翻转
+        // function reverse(arr) {
+        //     var newArr = []
+        //     for (var i = arr.length - 1; i >= 0; i--) {
+        //         newArr[newArr.length] = arr[i]
+        //     }
+        //     return newArr
+        // }
+        // var arr1 = reverse([1, 2, 5, 6, 3, 9])
+        // console.log(arr1)
+        // console.log('--------------------------------------------------------------')
+
+        // 5.冒泡排序
+        // 思路: 1.声明数组[5, 4, 2, 3, 1];
+        //      2.for循环, 外层循环管理进行几躺(arr.length - 1, 每执行一次长度减一)
+        //                 内层循环管理交换几次(arr.length - i - 1, 每交换一次顺序增大)
+        //      3.使用if判断 当前面一个值大于后面一个值时, 则进行元素交换
+        // function abb(arr) {
+        //     for (var i = 0; i < arr.length - 1; i++) {
+        //         for (var j = 0; j <script arr.length - i - 1; j++)
+        //             if (arr[j] > arr[j + 1]) {
+        //                 var dd = arr[j]
+        //                 arr[j] = arr[j + 1]
+        //                 arr[j + 1] = dd
+        //             }
+        //     }
+        //     return arr;
+        // }
+        // var add = abb([7, 2, 5, 6, 3, 1])
+        // console.log(add)
+        // console.log('--------------------------------------------------------------')
+
+        // 6.调用判断闰年函数, 输出年份2月份天数
+        // 判断闰年 ---- 返回true 和 false
+        // function fn(year) {
+        //     var flag = false
+        //     if ((year % 4 == 0 && year % 100 == 0) || year % 100 == 0) {
+        //         flag = true
+        //     }
+        //     return flag
+        // }
+        // // 用户输入年份,判断是否为闰年
+        // function fn1() {
+        //     var year = prompt('请您输入年份:')
+        //     if (fn(year)) {
+        //         alert('今年是闰年,2月份有29天')
+        //     } else {
+        //         alert('今年是平年,2月份有28天')
+        //     }
+        // }
+        // fn1()
+    </script>
+</body>
+
+</html>

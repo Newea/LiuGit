@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>对象</title>
+</head>
+
+<body>
+    <script>
+        //                           对象
+        //                           关于对象属性
+        // 需求: 我需要拿到obj 对象中 skill方法中 abb变量的值;  输出应该是 呵呵
+        // var obj = {
+        //     name: '可可',
+        //     age: 5,
+        //     colour: '棕红色',
+        //     skill: function () {
+        //         var abb = '呵呵'
+        //         return abb   //函数内部return后, 会返回这个值
+        //     },
+        // }           //函数要调用
+        // console.log(obj.skill())   //呵呵
+        //  总结:
+        // 踩的坑: 获取 skill函数中的abb变量的值,用的 obj.skill['abb']获取属性方法
+        // 问题: 1.obj.skill['abb'] 只能获取属性, 不能获取变量本身的值
+        // 2. 在全局作用域中,无法拿到函数作用域中的变量值,会产生'跨域'
+        //要记的点:
+        // 函数内部代码,跟函数本身没关系, 它只是一个封装代码容器
+        // 对象名['属性名']方法, 只适用于获取属性值
+    </script>
+</body>
+
+</html>
