@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            // for循环案例
+            // var a = 0 //偶数
+            // var b = 0 //奇数
+            // for (var i = 1; i <= 100; i++) {
+            //     if (i % 2 == 0) {
+            //         a = a + i
+            //     } else {
+            //         b = b + i
+            //     }
+            // }
+            // console.log('所有偶数和是' + a)
+            // console.log('所有奇数和是' + b)
+            // console.log('----------------------------------------------');
+            // var num = 0
+            // for (var i = 1; i <= 100; i++) {
+            //     if (i % 3 == 0) {
+            //         num += i
+            //     }
+            // }
+            // console.log('能被三整除的数的和为' + num)
+
+            // 求班级总人数的成绩和与平均成绩
+            // 思路: 1.先弹框,让用户输入班级人数, 然后存入到变量中
+            //      2.利用for循环, 引用i变量,使用户输入人数, 弹出相应的输入框  i变量始终不大于班级总人数
+            //      3.拿到成绩值后, 声明一个变量存起来
+            //      4.声明 求和与平均值的变量
+            //      5.用算术运算符获取到学生总成绩, 由于prompt输入框提取到的值为字符串,
+            //         需要用 parseFloat 转换为数字型
+            //      6. 用总成绩除与总人数, 将值给声明的平均值变量
+            // var sum = prompt('请输入班级总人数')
+            // var num = 0 // 求和
+            // var app = 0 // 平均值
+            // for (var i = 1; i <= sum; i++) {
+            //     var suv = prompt('请输入第' + i + '名学生的成绩')
+            //     num += parseFloat(suv)
+            //     var app = num / sum
+            // }
+            // alert('班级的总成绩是' + num)
+            // alert('班级的平均成绩是' + app)
+
+            // console.log('----------------------------------');
+
+            // 打印正三角星星案例
+            // var src = ''
+            // for (var i = 1; i <= 9; i++) {
+            //     for (var j = 1; j <= i; j++) {
+            //         src = src + '❤'
+            //     }
+            //     src = src + '\n'
+            // }
+            // console.log(src)
+            // console.log('---------------------------')
+
+            // 打印倒三角案例
+            // 思路就是,外层的慢慢递增, 内层的慢慢递减
+            // var scc = ''
+            // for (var i = 0; i <= 9; i++) {
+            //     for (var j = 0; j < 9 - i; j++) {
+            //         scc = scc + '❤'
+            //     }
+            //     scc = scc + '\n'
+            // }
+            // console.log(scc)
+            // console.log('-------------------------------')
+
+            // n行n列星星
+            // var abb = ''
+            // var a = prompt('请输入列')
+            // var b = prompt('请输入行')
+            // for (var i = 1; i <= a; i++) {
+            //     for (var j = 1; j <= b; j++) {
+            //         abb = abb + '❤'
+            //     }
+            //     abb = abb + '\n'
+            // }
+            // console.log(abb)
+            // console.log('-------------------------------')
+
+            // 99乘法表
+            // 思路: 1, 就是打印正三角形的for循环思路
+            //       2, 把星星换成表达式
+            //       3, 根据 1 x 2 = 2 的形式进行字符串拼接
+            //       4,  运用 \t 首行缩进符, 换行符 \n
+            //       5, 根据 i 和 j  的特性, 适当进行调换
+            // var a = ''
+            // for (var i = 1; i <= 9; i++) {
+            //     for (var j = 1; j <= i; j++) {
+            //         a += j + 'x' + i + '=' + i * j
+            //         a += '\t' // 首行缩进
+            //     }
+            //     a += '\n' // 换行
+            // }
+            // console.log(a)
+            // console.log('-------------------------------')
+
+            // while 循环
+            // var message = prompt('你爱不爱我?')
+            // while (message != '我爱你') {
+            //     message = prompt('你爱不爱我?')
+            // }
+            // alert('我也爱你')
+            // 1.打印一生
+            // var age = 0
+            // while (age <= 100) {
+            //     console.log('这个人今年' + age + '岁了')
+            //     age++; // 切记加上
+            // }
+            // console.log('-------------------------------')
+
+            //  do......while循环
+            // 1.打印一生
+            // var i = 1
+            // do {
+            //     console.log('这个人今年' + i + ',他出生了')
+            //     i++
+            // } while (i <= 100)
+            //  2. 计算1 ~ 100 之间所有整数的和
+            // var sum = 0
+            // var j = 1
+            // do {
+            //     sum += j
+            //     j++
+            // } while (j <= 100)
+            // console.log(sum)
+            // // 3. 弹出提示框
+            // do {
+            //     var massage = prompt('你爱我吗?')
+            // } while (massage !== '我爱你')
+            // alert('我也爱你')
+            // console.log('.................................................')
+
+            //                                            数组
+            // 1.取平均值
+            // var arr = [1, 2, 3, 4, 5]
+            // var sum = 0 // 和
+            // var app = 0 // 平均值
+            // for (var i = 0; i < arr.length; i++) {
+            //     sum += arr[i] // 要加的是数组的元素arr[i], 不是i计数器
+            // }
+            // app = sum / arr.length
+            // console.log(sum, app)
+
+            // 2.获取最大值
+            // 思路: 1.声明数组
+            //       2.声明一个最大值的变量 max, 默认为第一个元素
+            //       3.遍历这个数组,利用for 循环 嵌套if 判断如果元素大于 max 将元素储存到max中
+            //       4.输出max
+            // var arr1 = [9, 6, 8, 4, 5, 3]
+            // var max = arr1[0]
+            // for (var i = 1; i < arr1.length; i++) {
+            //     if (arr[i] > max) {
+            //         // 如果arr[i] 大于max ,则将这个元素保存至max中
+            //         max = arr[i]
+            //     }
+            // }
+            // console.log(max)
+            // console.log('--------------------------------------------------------------')
+
+            // 3.数据转换为字符串
+            // 思路:
+            // 1.创建一个存放字符串变量
+            // 2.遍历数组， 将元素获取出来， 加到字符串里面
+            // var arr2 = ['red', 'bbc', '我的天啊', '你在哪', '不仍然']
+            // var bbc = ''
+            // for (var i = 1; i < arr2.length; i++) {
+            //     bbc += arr2[i] + '|'
+            // }
+            // console.log(bbc)
+            // console.log('--------------------------------------------------------------')
+
+            // 4.利用数组存放1-100个值
+            // 思路: 1.声明一个空数组, 用来存放元素
+            //       2.利用for循环, 循环100次
+            //       3.将值放入空数组中, 不能直接赋值  根据i 的变化赋值给数组的索引
+            //       4. 输出数组变量
+            // arr = []
+            // for (var i = 1; i < 100; i++) {
+            //     arr[i] = i + 1
+            // }
+            // console.log(arr)
+            // console.log('--------------------------------------------------------------')
+
+            // 5.大于10的元素获取出来
+            // 思路: 1.声明一个新的数组用来存放新数据
+            //      2. 遍历旧数组, 用if判断, 将大于10的数据获取出来
+            //      3. 将获取到的变量存放到新数组长度中
+            // var arr4 = [6, 5, 8, 11, 55, 33, 22, 5, 9, 77, 5, 10]
+            // var newArr = [];
+            // for(var i = 0; i < arr4.length; i++){
+            //     if(arr4[i] >= 10){
+            //         newArr[newArr.length] = arr4[i]
+            //  }
+            // }
+            // console.log(newArr)
+            // console.log('--------------------------------------------------------------')
+
+            // 6.翻转数组
+            // 思路: 1.声明一个新数组newArr
+            //      2.遍历数组, 将数组最后一个元素获取过来 arr.length - 1
+            //      3.将获取过来的值给这个新数组第一个元素
+            //      4. 因为要反向获取旧数组的元素, 这里采用递减的方式
+            // var arr = [6, 8, 11, 55, 33, 22, 5, 9, 77, 5, 10];
+            // var newArr = [];
+            // for(var i = arr.length -1; i >= 0; i--) {
+            //     newArr[newArr.length] = arr[i]
+            // }
+            // console.log(arr)
+            // console.log(newArr)
+            // console.log('--------------------------------------------------------------')
+
+            // 7.冒泡排序
+            // 思路: 1.声明数组[5, 4, 2, 3, 1];
+            //      2.for循环, 外层循环管理进行几躺(arr.length - 1, 每执行一次长度减一)
+            //                 内层循环管理交换几次(arr.length - i - 1, 每交换一次顺序增大)
+            //      3.使用if判断  满足条件则进行元素交换
+            //
+            // var arr = [5, 4, 2, 3, 1];
+            //     for(var i = 0; i <= arr.length - 1; i++){
+            //         for(var j = 0; j <= arr.length - i - 1; j++){
+            //             if(arr[j] > arr[j + 1]){ // 当前面的值大于后面的值,执行交换
+            //                 var dd = arr[j];
+            //                 arr[j] = arr[j + 1]
+            //                 arr[j + 1] = dd
+            //             }
+            //         }
+            //     }
+            //     console.log(arr)
+            // console.log('--------------------------------------------------------------')
+
+            //                                       函数
+            // 1.函数封装,求1~100的累加和
+            // function abb() {
+            //     var sum = 0
+            //     for (var i = 1; i <= 100; i++) {
+            //         sum += i
+            //     }
+            //     console.log(sum)
+            // }
+            // abb()
+            // console.log('--------------------------------------------------------------')
+
+            // // 2.函数封装求任意和
+            // function abb(num1, num2) {
+            //     var num = 0
+            //     for (var i = num1; i <= num2; i++) {
+            //         num += i
+            //     }
+            //     console.log(num)
+            // }
+            // abb(1, 100)
+            // console.log('--------------------------------------------------------------')
+
+            //  3.函数封装,求数组中最大值
+            // function getArrMax(arr) {
+            //     var max = arr[0]
+            //     for (var i = 1; i <= arr.length; i++) {
+            //         if (arr[i] > max) {
+            //             max = arr[i]
+            //         }
+            //     }
+            //     return max
+            // }
+            // var bb = getArrMax([[6, 5, 8, 11, 5]])
+            // console.log(bb)
+            // console.log('--------------------------------------------------------------')
+
+            // 4.运用函数封装进行reverse翻转
+            // function reverse(arr) {
+            //     var newArr = []
+            //     for (var i = arr.length - 1; i >= 0; i--) {
+            //         newArr[newArr.length] = arr[i]
+            //     }
+            //     return newArr
+            // }
+            // var arr1 = reverse([1, 2, 5, 6, 3, 9])
+            // console.log(arr1)
+            // console.log('--------------------------------------------------------------')
+
+            // 5.冒泡排序
+            // 思路: 1.声明数组[5, 4, 2, 3, 1];
+            //      2.for循环, 外层循环管理进行几躺(arr.length - 1, 每执行一次长度减一)
+            //                 内层循环管理交换几次(arr.length - i - 1, 每交换一次顺序增大)
+            //      3.使用if判断 当前面一个值大于后面一个值时, 则进行元素交换
+            // function abb(arr) {
+            //     for (var i = 0; i < arr.length - 1; i++) {
+            //         for (var j = 0; j <script arr.length - i - 1; j++)
+            //             if (arr[j] > arr[j + 1]) {
+            //                 var dd = arr[j]
+            //                 arr[j] = arr[j + 1]
+            //                 arr[j + 1] = dd
+            //             }
+            //     }
+            //     return arr;
+            // }
+            // var add = abb([7, 2, 5, 6, 3, 1])
+            // console.log(add)
+            // console.log('--------------------------------------------------------------')
+
+            // 6.调用判断闰年函数, 输出年份2月份天数
+            // 判断闰年 ---- 返回true 和 false
+            // function fn(year) {
+            //     var flag = false
+            //     if ((year % 4 == 0 && year % 100 == 0) || year % 100 == 0) {
+            //         flag = true
+            //     }
+            //     return flag
+            // }
+            // // 用户输入年份,判断是否为闰年
+            // function fn1() {
+            //     var year = prompt('请您输入年份:')
+            //     if (fn(year)) {
+            //         alert('今年是闰年,2月份有29天')
+            //     } else {
+            //         alert('今年是平年,2月份有28天')
+            //     }
+            // }
+            // fn1()
+            // console.log('--------------------------------------------------------------')
+            //
+            //
+            //                           对象
+            //                           关于对象属性
+            // 需求: 我需要拿到obj 对象中 skill方法中 abb变量的值;  输出应该是 呵呵
+            // var obj = {
+            //     name: '可可',
+            //     age: 5,
+            //     colour: '棕红色',
+            //     skill: function () {
+            //         var abb = '呵呵'
+            //         return abb   //函数内部return后, 会返回这个值
+            //     },
+            // }           //函数要调用
+            // console.log(obj.skill())   //呵呵
+            //  总结:
+            // 踩的坑: 获取 skill函数中的abb变量的值,用的 obj.skill['abb']获取属性方法
+            // 问题: 1.obj.skill['abb'] 只能获取属性, 不能获取变量本身的值
+            // 2. 在全局作用域中,无法拿到函数作用域中的变量值,会产生'跨域'
+            //要记的点:
+            // 函数内部代码,跟函数本身没关系, 它只是一个封装代码容器
+            // 对象名['属性名']方法, 只适用于获取属性值
+        </script>
+    </body>
+</html>
